@@ -16,7 +16,7 @@ services:
     env_file: .env
     volumes:
       - static:/backend_static
-      - media:/app/media
+      - media:/media
   frontend:
     env_file: .env
     image: ganetzckayaliza/kittygram_frontend
@@ -27,7 +27,7 @@ services:
     image: ganetzckayaliza/kittygram_gateway
     volumes:
       - static:/staticfiles
-      - media:/app/media
+      - media:/media
 
     ports:
       - 9000:80
